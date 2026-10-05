@@ -17,7 +17,7 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 function sendQuote(event) {
   event.preventDefault();
   // CHANGE THIS to your real business email before publishing.
-  const businessEmail = "sam.mulaga395@gmail.com";
+  const businessEmail = "your-email@example.com";
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
   const service = document.getElementById("service").value;
