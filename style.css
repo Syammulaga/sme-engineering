@@ -17,3 +17,393 @@
     box-shadow:0 12px 25px rgba(0,0,0,.08)
   }
 }
+/* =====================================================
+   SME ENGINEERING & DESIGN
+   PREMIUM 3D BLUE PORTFOLIO
+===================================================== */
+
+.portfolio-section {
+  position: relative;
+  padding: 110px 0;
+  background:
+    linear-gradient(
+      180deg,
+      #f4f8fc 0%,
+      #ffffff 50%,
+      #f4f8fc 100%
+    );
+  overflow: hidden;
+}
+
+
+/* Decorative background */
+
+.portfolio-section::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: -220px;
+  right: -180px;
+  background: radial-gradient(
+    circle,
+    rgba(24,160,255,0.13),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.portfolio-section::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  bottom: -200px;
+  left: -180px;
+  background: radial-gradient(
+    circle,
+    rgba(8,120,232,0.10),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+
+/* Container */
+
+.portfolio-container {
+  position: relative;
+  z-index: 2;
+  width: min(1180px, 92%);
+  margin: auto;
+}
+
+
+/* Heading */
+
+.section-heading {
+  max-width: 760px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.section-tag {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 7px 16px;
+  border-radius: 30px;
+  background: rgba(8,120,232,0.09);
+  color: #0878e8;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.section-heading h2 {
+  margin: 0 0 15px;
+  color: #071b33;
+  font-size: clamp(34px, 5vw, 52px);
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.section-heading h2 span {
+  color: #0878e8;
+}
+
+.section-heading p {
+  margin: 0 auto;
+  max-width: 680px;
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   FILTER BUTTONS
+===================================================== */
+
+.portfolio-filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 45px;
+}
+
+.portfolio-filter {
+  border: 1px solid #dce6f1;
+  background: #ffffff;
+  color: #14263d;
+  padding: 11px 20px;
+  border-radius: 30px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.portfolio-filter:hover {
+  border-color: #0878e8;
+  color: #0878e8;
+  transform: translateY(-2px);
+}
+
+.portfolio-filter.active {
+  color: #ffffff;
+  border-color: #0878e8;
+  background: linear-gradient(
+    135deg,
+    #0878e8,
+    #18a0ff
+  );
+  box-shadow:
+    0 8px 22px rgba(8,120,232,0.25);
+}
+
+
+/* =====================================================
+   PORTFOLIO GRID
+===================================================== */
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+
+/* =====================================================
+   PORTFOLIO CARD
+===================================================== */
+
+.portfolio-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #dce6f1;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow:
+    0 10px 35px rgba(7,27,51,0.07);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(8,120,232,0.35);
+  box-shadow:
+    0 25px 55px rgba(7,27,51,0.15);
+}
+
+
+/* =====================================================
+   PORTFOLIO IMAGE
+===================================================== */
+
+.portfolio-image {
+  position: relative;
+  height: 270px;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      135deg,
+      #071b33,
+      #0d2b4c
+    );
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition:
+    transform 0.7s ease,
+    filter 0.5s ease;
+}
+
+.portfolio-card:hover .portfolio-image img {
+  transform: scale(1.08);
+  filter: brightness(0.72);
+}
+
+
+/* =====================================================
+   IMAGE OVERLAY
+===================================================== */
+
+.portfolio-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 28px;
+  opacity: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7,27,51,0.05) 20%,
+      rgba(7,27,51,0.92) 100%
+    );
+  transform: translateY(10px);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+.portfolio-card:hover .portfolio-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.portfolio-overlay span {
+  margin-bottom: 7px;
+  color: #18a0ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.portfolio-overlay h3 {
+  margin: 0 0 16px;
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.portfolio-view {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  padding-bottom: 4px;
+  transition: all 0.3s ease;
+}
+
+.portfolio-view:hover {
+  color: #18a0ff;
+  border-color: #18a0ff;
+}
+
+
+/* =====================================================
+   PORTFOLIO INFORMATION
+===================================================== */
+
+.portfolio-info {
+  padding: 23px 24px 27px;
+}
+
+.portfolio-info > span {
+  display: block;
+  margin-bottom: 8px;
+  color: #0878e8;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.portfolio-info h3 {
+  margin: 0 0 9px;
+  color: #071b33;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.portfolio-info p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   FILTER ANIMATION
+===================================================== */
+
+.portfolio-card.portfolio-hidden {
+  display: none;
+}
+
+.portfolio-card.portfolio-show {
+  animation: portfolioShow 0.45s ease both;
+}
+
+@keyframes portfolioShow {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .portfolio-section {
+    padding: 80px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 35px;
+  }
+
+  .section-heading h2 {
+    font-size: 34px;
+  }
+
+  .portfolio-filters {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 8px;
+  }
+
+  .portfolio-filter {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .portfolio-image {
+    height: 250px;
+  }
+
+}
