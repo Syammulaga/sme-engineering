@@ -7,33 +7,6 @@
   <title>SME Engineering & Design | Complete Engineering & Design Solutions</title>
   <link rel="stylesheet" href="style.css">
 </head>
-  <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const filters = document.querySelectorAll(".portfolio-filter");
-  const cards = document.querySelectorAll(".portfolio-card");
-  filters.forEach(function (filter) {
-    filter.addEventListener("click", function () {
-      const category = this.getAttribute("data-filter");
-      filters.forEach(function (button) {
-        button.classList.remove("active");
-      });
-      this.classList.add("active");
-      cards.forEach(function (card) {
-        const cardCategory = card.getAttribute("data-category");
-        if (category === "all" || cardCategory === category) {
-          card.classList.remove("portfolio-hidden");
-          card.classList.remove("portfolio-show");
-          void card.offsetWidth;
-          card.classList.add("portfolio-show");
-        } else {
-          card.classList.add("portfolio-hidden");
-          card.classList.remove("portfolio-show");
-        }
-      });
-    });
-  });
-});
-</script>
 <body>
 <header class="header">
   <div class="container nav">
@@ -47,330 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#portfolio">Portfolio</a>
-<!-- =========================
-     SME PORTFOLIO SECTION
-========================= -->
-
-<section id="portfolio" class="portfolio-section">
-
-  <div class="portfolio-container">
-
-    <div class="section-heading">
-      <span class="section-tag">OUR WORK</span>
-      <h2>Featured <span>Portfolio</span></h2>
-      <p>
-        Selected engineering, architectural and design solutions
-        developed for residential, commercial and industrial projects.
-      </p>
-    </div>
-
-    <!-- Portfolio Filters -->
-    <div class="portfolio-filters">
-
-      <button class="portfolio-filter active" data-filter="all">
-        All
-      </button>
-
-      <button class="portfolio-filter" data-filter="residential">
-        Residential
-      </button>
-
-      <button class="portfolio-filter" data-filter="commercial">
-        Commercial
-      </button>
-
-      <button class="portfolio-filter" data-filter="oilgas">
-        Oil & Gas
-      </button>
-
-      <button class="portfolio-filter" data-filter="civil">
-        Civil & Structural
-      </button>
-
-      <button class="portfolio-filter" data-filter="mep">
-        MEP
-      </button>
-
-      <button class="portfolio-filter" data-filter="bim">
-        BIM & 3D
-      </button>
-
-    </div>
-
-
-    <!-- Portfolio Grid -->
-    <div class="portfolio-grid">
-
-
-      <!-- PROJECT 01 -->
-      <article class="portfolio-card" data-category="residential">
-
-        <div class="portfolio-image">
-
-          <img
-            src="images/portfolio/residential-villa.jpg"
-            alt="Modern Residential Villa Design"
-          >
-
-          <div class="portfolio-overlay">
-            <span>Residential Architecture</span>
-            <h3>Modern Residential Villa</h3>
-
-            <a href="#" class="portfolio-view">
-              View Project →
-            </a>
-          </div>
-
-        </div>
-
-        <div class="portfolio-info">
-          <span>RESIDENTIAL</span>
-          <h3>Modern Residential Villa</h3>
-          <p>
-            Architectural planning, elevations, 3D visualization
-            and coordinated engineering design.
-          </p>
-        </div>
-
-      </article>
-
-
-      <!-- PROJECT 02 -->
-      <article class="portfolio-card" data-category="residential">
-
-        <div class="portfolio-image">
-
-          <img
-            src="images/portfolio/villa-3d.jpg"
-            alt="Luxury Villa 3D Design"
-          >
-
-          <div class="portfolio-overlay">
-            <span>Residential Architecture</span>
-            <h3>Luxury Villa Concept</h3>
-
-            <a href="#" class="portfolio-view">
-              View Project →
-            </a>
-          </div>
-
-        </div>
-
-        <div class="portfolio-info">
-          <span>RESIDENTIAL</span>
-          <h3>Luxury Villa Concept</h3>
-          <p>
-            Contemporary villa planning with functional layouts,
-            elevations and realistic 3D visualization.
-          </p>
-        </div>
-
-      </article>
-
-
-      <!-- PROJECT 03 -->
-      <article class="portfolio-card" data-category="commercial">
-
-        <div class="portfolio-image">
-
-          <img
-            src="images/portfolio/commercial-building.jpg"
-            alt="Commercial Building Design"
-          >
-
-          <div class="portfolio-overlay">
-            <span>Commercial Architecture</span>
-            <h3>Commercial Building</h3>
-
-            <a href="#" class="portfolio-view">
-              View Project →
-            </a>
-          </div>
-
-        </div>
-
-        <div class="portfolio-info">
-          <span>COMMERCIAL</span>
-          <h3>Commercial Building</h3>
-          <p>
-            Space planning, architectural design, elevations and
-            engineering coordination.
-          </p>
-        </div>
-
-      </article>
-
-
-      <!-- PROJECT 04 -->
-      <article class="portfolio-card" data-category="oilgas">
-
-        <div class="portfolio-image">
-
-          <img
-            src="images/portfolio/oil-gas.jpg"
-            alt="Oil and Gas Engineering Project"
-          >
-
-          <div class="portfolio-overlay">
-            <span>Oil & Gas Engineering</span>
-            <h3>Industrial Engineering Project</h3>
-
-            <a href="#" class="portfolio-view">
-              View Project →
-            </a>
-          </div>
-
-        </div>
-
-        <div class="portfolio-info">
-          <span>OIL & GAS</span>
-          <h3>Industrial Engineering Project</h3>
-          <p>
-            EPC engineering, brownfield modifications, piping,
-            equipment and multidisciplinary coordination.
-          </p>
-        </div>
-
-      </article>
-
-
-      <!-- PROJECT 05 -->
-      <article class="portfolio-card" data-category="civil">
-
-        <div class="portfolio-image">
-
-          <img
-            src="images/portfolio/civil-structural.jpg"
-            alt="Civil and Structural Engineering"
-          >
-
-          <div class="portfolio-overlay">
-            <span>Civil & Structural</span>
-            <h3>Civil Infrastructure</h3>
-
-            <a href="#" class="portfolio-view">
-              View Project →
-            </a>
-          </div>
-
-        </div>
-
-        <div class="portfolio-info">
-          <span>CIVIL & STRUCTURAL</span>
-          <h3>Civil Infrastructure</h3>
-          <p>
-            Civil layouts, foundations, structural drawings,
-            roads, drainage and infrastructure design.
-          </p>
-        </div>
-
-      </article>
-
-
-      <!-- PROJECT 06 -->
-      <article class="portfolio-card" data-category="mep">
-
-        <div class="portfolio-image">
-
-          <img
-            src="images/portfolio/mep.jpg"
-            alt="MEP Engineering Design"
-          >
-
-          <div class="portfolio-overlay">
-            <span>MEP Engineering</span>
-            <h3>MEP Coordination</h3>
-
-            <a href="#" class="portfolio-view">
-              View Project →
-            </a>
-          </div>
-
-        </div>
-
-        <div class="portfolio-info">
-          <span>MEP</span>
-          <h3>MEP Engineering</h3>
-          <p>
-            Electrical, HVAC, plumbing, fire protection and
-            multidisciplinary MEP coordination.
-          </p>
-        </div>
-
-      </article>
-
-
-      <!-- PROJECT 07 -->
-      <article class="portfolio-card" data-category="bim">
-
-        <div class="portfolio-image">
-
-          <img
-            src="images/portfolio/bim-model.jpg"
-            alt="BIM and 3D Engineering Model"
-          >
-
-          <div class="portfolio-overlay">
-            <span>BIM & 3D</span>
-            <h3>BIM Coordination Model</h3>
-
-            <a href="#" class="portfolio-view">
-              View Project →
-            </a>
-          </div>
-
-        </div>
-
-        <div class="portfolio-info">
-          <span>BIM & 3D</span>
-          <h3>BIM Coordination Model</h3>
-          <p>
-            BIM modelling, 3D coordination, clash detection and
-            construction-ready engineering information.
-          </p>
-        </div>
-
-      </article>
-
-
-      <!-- PROJECT 08 -->
-      <article class="portfolio-card" data-category="oilgas">
-
-        <div class="portfolio-image">
-
-          <img
-            src="images/portfolio/as-built.jpg"
-            alt="As Built Engineering Drawings"
-          >
-
-          <div class="portfolio-overlay">
-            <span>Engineering Documentation</span>
-            <h3>RLMU & As-Built Conversion</h3>
-
-            <a href="#" class="portfolio-view">
-              View Project →
-            </a>
-          </div>
-
-        </div>
-
-        <div class="portfolio-info">
-          <span>OIL & GAS</span>
-          <h3>RLMU & As-Built Conversion</h3>
-          <p>
-            Existing-condition surveys, drawing conversion,
-            RLMU documentation and as-built engineering drawings.
-          </p>
-        </div>
-
-      </article>
-
-
-    </div>
-
-  </div>
-
-</section>
       <a href="#why">Why Choose Us</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -427,18 +76,18 @@ document.addEventListener("DOMContentLoaded", function () {
       <p>End-to-end engineering and design support for residential, commercial, construction, industrial and Oil &amp; Gas projects.</p>
     </div>
     <div class="service-grid">
-      <article class="card"><div class="icon">⌂</div><h3>Architecture</h3><p>Residential, commercial, interior &amp; exterior design, floor plans, elevations and sections.</p></article>
-      <article class="card"><div class="icon">▧</div><h3>Civil Engineering</h3><p>Site development, grading, drainage, roads, utilities, infrastructure and civil drawings.</p></article>
-      <article class="card"><div class="icon">▥</div><h3>Structural Design</h3><p>RCC and steel structures, foundations, analysis, detailing and shop drawings.</p></article>
-      <article class="card"><div class="icon">⌁</div><h3>Piping Design</h3><p>Process and utility piping, P&amp;IDs, layouts, isometrics, supports and 3D modelling.</p></article>
-      <article class="card"><div class="icon">⚡</div><h3>MEP Design</h3><p>HVAC, electrical, plumbing, fire protection, low-current and building services.</p></article>
-      <article class="card"><div class="icon">⚙</div><h3>Oil &amp; Gas / Industrial</h3><p>Plant layouts, equipment, pipe racks, platforms, skids, tie-ins and modifications.</p></article>
-      <article class="card"><div class="icon">◇</div><h3>BIM &amp; 3D Modeling</h3><p>Revit, Plant 3D, Navisworks, 3D visualisation, coordination and clash detection.</p></article>
-      <article class="card featured"><div class="icon">↗</div><h3>RLMU &amp; As-Built</h3><p>Redline conversion, PDF to CAD, site mark-ups, existing drawings and As-Built updates.</p></article>
-      <article class="card"><div class="icon">⌘</div><h3>CAD Drafting</h3><p>2D/3D drafting, detail drawings, fabrication drawings and engineering documentation.</p></article>
-      <article class="card"><div class="icon">▱</div><h3>Shop &amp; Fabrication Drawings</h3><p>Structural, piping, platform, staircase, support and fabrication details.</p></article>
-      <article class="card"><div class="icon">⌖</div><h3>Survey &amp; Existing Drawings</h3><p>Existing layouts, field mark-ups, building and plant documentation to CAD.</p></article>
-      <article class="card"><div class="icon">▤</div><h3>Engineering Documentation</h3><p>MTO, BOQ, schedules, line lists, equipment lists and drawing registers.</p></article>
+      <article class=""><div class="icon">⌂</div><h3>Architecture</h3><p>Residential, commercial, interior &amp; exterior design, floor plans, elevations and sections.</p></article>
+      <article class=""><div class="icon">▧</div><h3>Civil Engineering</h3><p>Site development, grading, drainage, roads, utilities, infrastructure and civil drawings.</p></article>
+      <article class=""><div class="icon">▥</div><h3>Structural Design</h3><p>RCC and steel structures, foundations, analysis, detailing and shop drawings.</p></article>
+      <article class=""><div class="icon">⌁</div><h3>Piping Design</h3><p>Process and utility piping, P&amp;IDs, layouts, isometrics, supports and 3D modelling.</p></article>
+      <article class=""><div class="icon">⚡</div><h3>MEP Design</h3><p>HVAC, electrical, plumbing, fire protection, low-current and building services.</p></article>
+      <article class=""><div class="icon">⚙</div><h3>Oil &amp; Gas / Industrial</h3><p>Plant layouts, equipment, pipe racks, platforms, skids, tie-ins and modifications.</p></article>
+      <article class=""><div class="icon">◇</div><h3>BIM &amp; 3D Modeling</h3><p>Revit, Plant 3D, Navisworks, 3D visualisation, coordination and clash detection.</p></article>
+      <article class=" featured"><div class="icon">↗</div><h3>RLMU &amp; As-Built</h3><p>Redline conversion, PDF to CAD, site mark-ups, existing drawings and As-Built updates.</p></article>
+      <article class=""><div class="icon">⌘</div><h3>CAD Drafting</h3><p>2D/3D drafting, detail drawings, fabrication drawings and engineering documentation.</p></article>
+      <article class=""><div class="icon">▱</div><h3>Shop &amp; Fabrication Drawings</h3><p>Structural, piping, platform, staircase, support and fabrication details.</p></article>
+      <article class=""><div class="icon">⌖</div><h3>Survey &amp; Existing Drawings</h3><p>Existing layouts, field mark-ups, building and plant documentation to CAD.</p></article>
+      <article class=""><div class="icon">▤</div><h3>Engineering Documentation</h3><p>MTO, BOQ, schedules, line lists, equipment lists and drawing registers.</p></article>
     </div>
   </div>
 </section>
@@ -456,25 +105,49 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   </div>
 </section>
-
 <section id="portfolio" class="section portfolio">
   <div class="container">
     <div class="section-head left">
       <p class="eyebrow">OUR PORTFOLIO</p>
-      <h2>Project Categories</h2>
-      <p>Replace these placeholders with your own non-confidential project images and completed work.</p>
+      <h2>Featured Projects</h2>
+      <p>
+        Selected architectural, engineering and design solutions.
+      </p>
     </div>
     <div class="portfolio-grid">
-      <div class="project"><div class="project-art villa"></div><h3>Residential Architecture</h3><p>Villa Design &amp; 3D Visualisation</p></div>
-      <div class="project"><div class="project-art piping"></div><h3>Piping Design</h3><p>Process Plant Piping Layout</p></div>
-      <div class="project"><div class="project-art steel"></div><h3>Structural Design</h3><p>Steel Structure &amp; Drawings</p></div>
-      <div class="project"><div class="project-art mep"></div><h3>MEP Design</h3><p>HVAC, Electrical &amp; Plumbing</p></div>
-      <div class="project"><div class="project-art plant"></div><h3>Oil &amp; Gas</h3><p>Plant Layout &amp; Equipment</p></div>
-      <div class="project"><div class="project-art rlmu"></div><h3>RLMU &amp; As-Built</h3><p>Redline to As-Built Conversion</p></div>
+      <div class="project">
+        <div class="project-art villa"></div>
+        <h3>Residential Architecture</h3>
+        <p>Villa Design & 3D Visualisation</p>
+      </div>
+      <div class="project">
+        <div class="project-art piping"></div>
+        <h3>Piping Design</h3>
+        <p>Process Plant Piping Layout</p>
+      </div>
+      <div class="project">
+        <div class="project-art steel"></div>
+        <h3>Structural Design</h3>
+        <p>Steel Structure & Drawings</p>
+      </div>
+      <div class="project">
+        <div class="project-art mep"></div>
+        <h3>MEP Design</h3>
+        <p>HVAC, Electrical & Plumbing</p>
+      </div>
+      <div class="project">
+        <div class="project-art plant"></div>
+        <h3>Oil & Gas</h3>
+        <p>Plant Layout & Equipment</p>
+      </div>
+      <div class="project">
+        <div class="project-art rlmu"></div>
+        <h3>RLMU & As-Built</h3>
+        <p>Redline to As-Built Conversion</p>
+      </div>
     </div>
   </div>
 </section>
-
 <section class="cta">
   <div class="container cta-inner">
     <div><p class="eyebrow">HAVE A PROJECT?</p><h2>Tell us what you need.</h2><p>Send your drawings, mark-ups or project requirements and we can discuss the right design support.</p></div>
